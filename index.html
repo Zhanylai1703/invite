@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#4b0909">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Кыз узатуу — приглашение">
+<meta property="og:description" content="Приглашаем вас разделить с нашей семьёй этот особенный день!">
+<meta property="og:url" content="https://invite-eight-psi.vercel.app/">
+<meta property="og:image" content="https://invite-eight-psi.vercel.app/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://invite-eight-psi.vercel.app/preview.jpg">
+
 <title>Кыз узатуу — приглашение</title>
 <style>
 :root{--wine:#560d12;--wine2:#74151b;--gold:#d9ad5a;--cream:#fff2df;--ink:#5a2416}
@@ -262,7 +272,7 @@ document.getElementById('rsvpForm').addEventListener('submit',e=>{
  const subject=encodeURIComponent(currentLang==='ky'?'Чакыруу боюнча жооп — Кыз узатуу':'Ответ на приглашение — Кыз узатуу');
  const body=encodeURIComponent(currentLang==='ky'?`Аты-жөнү: ${name}\nЖооп: ${attendance==='Да, буду'?'Ооба, келем':'Келе албайм'}\nКоноктордун саны: ${guests}\nКомментарий: ${note}`:`Имя: ${name}\nОтвет: ${attendance}\nКоличество гостей: ${guests}\nКомментарий: ${note}`);
  document.getElementById('success').style.display='block';
- document.getElementById('success').textContent=currentLang==='ky'?'Жооп даярдалды. Түзмөгүңүздө почта тиркемеси орнотулган болсо, ал ачылат. Автоматтык жөнөтүү үчүн форманы атайын кызматка туташтыруу керек.':'Ответ подготовлен. Сейчас откроется почтовое приложение, если оно настроено на устройстве. Для реальной автоматической отправки нужно подключить форму к сервису.';
+ document.getElementById('success').textContent=currentLang==='ky'?'Жооп даярдалды. Түзмөгүңүздө почта тиркемеси орнотулган болсо, ал ачылат':'Ответ подготовлен. Сейчас откроется почтовое приложение, если оно настроено на устройстве.';
  document.getElementById('formContent').style.display='none';
  window.location.href =
   `mailto:altynajzx@gmail.com?subject=${subject}&body=${body}`;});
