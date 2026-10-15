@@ -135,15 +135,16 @@ html[lang="ky"] .countdown .kg-bottom { margin-top: 18px; }
  </div>
 </section>
 
-<audio id="bgMusic" loop preload="auto">
-    <source
-        src="https://invite-eight-psi.vercel.app/music.mp3"
-        type="audio/mpeg"
-    >
-</audio>
+<audio
+  id="bgMusic"
+  src="https://invite-eight-psi.vercel.app/music.mp3"
+  loop
+  preload="auto"
+  playsinline
+></audio>
 
 <button id="musicButton" class="music-button" type="button">
-  ♫
+  ♫ Включить музыку
 </button>
 
 <style>
@@ -172,13 +173,14 @@ musicButton.addEventListener('click', async () => {
   if (music.paused) {
     try {
       await music.play();
-      musicButton.textContent = '♫';
+      musicButton.textContent = '♫ Выключить музыку';
     } catch (error) {
-      musicButton.textContent = 'Не удалось включить музыку';
+      console.error('Ошибка музыки:', error);
+      musicButton.textContent = 'Нажмите ещё раз ♫';
     }
   } else {
     music.pause();
-    musicButton.textContent = '♫';
+    musicButton.textContent = '♫ Включить музыку';
   }
 });
 </script>
