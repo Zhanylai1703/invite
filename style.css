@@ -1,0 +1,22 @@
+.countdown-title .kg-top,
+.countdown .kg-bottom {
+  display: none;
+}
+
+html[lang="ky"] .countdown-title .ru-title {
+  display: none;
+}
+
+html[lang="ky"] .countdown-title .kg-top,
+html[lang="ky"] .countdown .kg-bottom {
+  display: block;
+  text-align: center;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #811b20;
+}
+
+html[lang="ky"] .countdown .kg-bottom {
+  margin-top: 18px;
+}
